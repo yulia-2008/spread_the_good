@@ -2,7 +2,9 @@ class User < ApplicationRecord
     has_secure_password
    
     has_many :posts
-    has_many :questions, through: :posts
+    has_many :comments, through: :posts
+    has_many :comments
+    has_many :posts, through: :comments
     
     has_many :active_relationships, class_name: "Connection", foreign_key: :helper_id, dependent: :destroy
     has_many :help_seekers, through: :active_relationships, source: :help_seeker

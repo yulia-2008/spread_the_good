@@ -15,6 +15,14 @@ ActiveRecord::Schema.define(version: 2020_09_16_145213) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "comments", force: :cascade do |t|
+    t.integer "post_id"
+    t.integer "user_id"
+    t.string "text"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "connections", force: :cascade do |t|
     t.integer "help_seeker_id"
     t.integer "helper_id"
@@ -28,13 +36,6 @@ ActiveRecord::Schema.define(version: 2020_09_16_145213) do
     t.string "description"
     t.string "image"
     t.boolean "active"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "questions", force: :cascade do |t|
-    t.integer "post_id"
-    t.string "text"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
