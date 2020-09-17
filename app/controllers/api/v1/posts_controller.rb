@@ -1,9 +1,9 @@
 class Api::V1::PostsController < ApplicationController
-    skip_before_action :authorized, only: [:create,  :index, :show, :update]
+    skip_before_action :authorized, only: [:index, :show]
 
         def index
           @posts = Post.all 
-          render json: @posts
+          render json: @posts, include: [:comments]
         end
 
         def show 

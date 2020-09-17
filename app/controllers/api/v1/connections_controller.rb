@@ -1,5 +1,5 @@
 class Api::V1::ConnectionsController < ApplicationController
-    skip_before_action :authorized, only: [:create,  :index, :show, :update]
+    #skip_before_action :authorized, only: [:create,  :index, :show, :update]
 
         def index
           @connections = Connection.all 
