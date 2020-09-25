@@ -1,5 +1,5 @@
 class Api::V1::UsersController < ApplicationController
-    skip_before_action :authorized, only: [:create, :index, :profile]
+    skip_before_action :authorized, only: [:create, :index, :profile, :show, :gethelpers]
  
   def index
     @users = User.all 
@@ -7,8 +7,16 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def show 
+   
     @user = User.find_by(id:params[:id])
-    render json: @user, include: [:posts, :comments], status: :accepted
+    render json: @user.posts, include: [:comments]
+  end
+
+  def gethelpers
+    
+    @user= User.find_by(id:params[:id])
+    @posts = @user.offered_help_posts
+    render json: @posts,  include: [:comments]
   end
 
   def profile
@@ -28,7 +36,7 @@ class Api::V1::UsersController < ApplicationController
   def update 
     @user = User.find_by(id:params[:id])
     @user.update(user_params)
-    render json: { user: UserSerializer.new(@user), jwt: @token }, status: :accepted
+    render json: @user
   end
  
   private

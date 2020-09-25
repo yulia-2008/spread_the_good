@@ -5,11 +5,12 @@ Rails.application.routes.draw do
         resources :comments
         resources :posts
         resources :connections
-
+      
+        get '/helpers/:id', to: 'users#gethelpers'
         post '/login', to: 'auth#create'
         get '/profile', to: 'users#profile'
       end
     end
   end
 
-  # nuzhen li /login rout? eto zhe component budet?
+  

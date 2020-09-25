@@ -1,9 +1,9 @@
 class Api::V1::ConnectionsController < ApplicationController
-    #skip_before_action :authorized, only: [:create,  :index, :show, :update]
+    skip_before_action :authorized, only: [:create,  :index, :show, :update]
 
         def index
           @connections = Connection.all 
-          render json: @connections
+          render json: @connections, include: [:help_seeker, :helper]
         end
 
         def show 
@@ -13,7 +13,7 @@ class Api::V1::ConnectionsController < ApplicationController
 
         def create
           @connection = Connection.create(c_params)
-            render json: { connection: ConnectionSerializer.new(@connection), jwt: @token }, status: :created
+            render json: @connection
         end
 
         def destroy 
