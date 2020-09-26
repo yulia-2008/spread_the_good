@@ -1,5 +1,5 @@
 class Api::V1::UsersController < ApplicationController
-    skip_before_action :authorized, only: [:create, :index, :profile, :show, :gethelpers]
+    skip_before_action :authorized, only: [:create, :gethelpers]
  
   def index
     @users = User.all 
@@ -16,11 +16,11 @@ class Api::V1::UsersController < ApplicationController
     
     @user= User.find_by(id:params[:id])
     @posts = @user.offered_help_posts
-    render json: @posts,  include: [:comments]
+    render json: @posts,  include: [:user, :comments]
   end
 
   def profile
-    render json: @user
+    render json: {user: current_user}, status: :not_acceptable
   end
  
   def create
