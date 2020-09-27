@@ -4,7 +4,7 @@ class User < ApplicationRecord
     has_many :posts
     has_many :comments, through: :posts
     has_many :comments
-    #has_many :posts, through: :comments
+    has_many :posts, through: :comments
     
     has_many :offered_help_posts, class_name: "Post", foreign_key: :helper_id, dependent: :destroy
     has_many :help_seekers, through: :offered_help_posts, source: :help_seeker

@@ -1,5 +1,5 @@
 class Api::V1::PostsController < ApplicationController
-    skip_before_action :authorized, only: [:index, :show]
+     skip_before_action :authorized, only: [:index]
 
         def index
           @posts = Post.all 
@@ -9,7 +9,8 @@ class Api::V1::PostsController < ApplicationController
 
         def show 
           @post = Post.find_by(id:params[:id])
-          render json: @post, include: [:comments, :users]
+
+          render json: @post, include: [ :comments, :users, :helper]
           #users - who wrote comments
         end
 
