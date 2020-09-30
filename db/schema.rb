@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 2020_09_16_145038) do
     t.string "description"
     t.string "image"
     t.boolean "active"
+    t.boolean "archived"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

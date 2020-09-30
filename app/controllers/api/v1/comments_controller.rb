@@ -4,7 +4,7 @@ class Api::V1::CommentsController < ApplicationController
         def index
           @comments = Comment.all 
           render json: @comments, include: [:user]
-        
+          #render :json => @comments, :include => [:user, :comments => {:include => [:user]}]
         end
 
         def show 

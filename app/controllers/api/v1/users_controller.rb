@@ -6,10 +6,10 @@ class Api::V1::UsersController < ApplicationController
     render json: @users
   end
 
-  def show 
-   
-    @user = User.find_by(id:params[:id])
-    render json: @user, include: [:user_posts, :comments, :helpers]
+  def show    
+    @user = User.find_by(id:params[:id])  
+   render :json => @user, :include => [ :user_posts =>  {:include => [:helper, :comments => {:include => [:user]}]}] 
+      
     #@user_posts - posts that user created
     #@user.posts - posts that user helped
     
@@ -19,7 +19,8 @@ class Api::V1::UsersController < ApplicationController
     
     @user= User.find_by(id:params[:id])
     @posts = @user.offered_help_posts
-    render json: @posts,  include: [:user, :comments]
+    #render json: @posts,  include: [:user, :comments]
+    render :json => @posts, :include => [:user, :comments => {:include => [:user]}]
   end
 
   def profile

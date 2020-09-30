@@ -3,8 +3,11 @@ class Api::V1::PostsController < ApplicationController
 
         def index
           @posts = Post.all 
-          render json: @posts, include: [:user, :comments ]
+          render :json => @posts, :include => [:user, :helper, :comments => {:include => [:user]}]
+
+          #render json: @posts, include: [:user, :comments ]
           # user -  who wrote post
+          #render :json => @user, :include => [ :user_posts =>  {:include => [:helper, :comments => {:include => [:user]}]}] 
         end
 
         def show 
@@ -37,7 +40,7 @@ class Api::V1::PostsController < ApplicationController
         private
        
         def post_params
-          params.require(:post).permit(:title, :helper_id, :user_id, :description, :active, :image)
+          params.require(:post).permit(:title, :helper_id, :user_id, :description, :active, :image, :archived)
         end
 end
 # delete post_params: active
