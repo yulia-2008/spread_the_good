@@ -32,14 +32,17 @@
 
 <h2>Getting Started</h2>
 <p><b>Instructions on setting up the project locally.</b> </p>
-<p>To get a local copy up and running follow these simple steps:</p>
-<p> 1. In your terminal go to the directory where you want to clone this project.</p>
+<p> 1. Make sure you have following tools installed on the system.</p>
+- Ruby 2.6.1
+- Rails 6.0.3.3
+- Postgresql
+<p> 2. In your terminal go to the directory where you want to clone this project.</p>
 
 ```sh
 cd <FOLDER_NAME>
 ```
 
-<p> 2.  Clone frontend and backend repos to the same folder.</p>
+<p> 3.  Clone frontend and backend repos to the same folder.</p>
 
 ```sh
 git clone  git@github.com:yulia-2008/spread_the_good_frontend.git
@@ -50,18 +53,12 @@ git clone  git@github.com:yulia-2008/spread_the_good_backend.git
 ```
 <p> <b>Backend installation: </b> </p>
 
-Make sure you have following tools installed on the system.
-- Ruby 2.6.1
-- Rails 6.0.3.3
-- Postgresql
-
-<p>In <b>spread_the_good_backend/config/database.yml</b> file enter your postgres user for the project and password as shown below:</p>
+<p> 1. In <b>spread_the_good_backend/config/database.yml</b> file enter your postgres user for the project and password as shown below:</p>
  <div align="center">
  <img src="./database_yml_example.jpg"></img>
  </div>
-
-  
-  <p> - Start rails server on port 4000, make sure you are in the project backend directory.</p>
+ 
+ <p> 2. Start rails server on port 4000, make sure you are in the project backend directory.</p>
      
 ```sh
 cd spread_the_good_backend
@@ -71,23 +68,23 @@ cd spread_the_good_backend
 rails s -p4000
 ```
 <p> <b>Frontend installation: </b></p>
- <p> - In your terminal go to frontend directory.</p>
+ <p> 1. In your terminal go to frontend directory.</p>
  
 ```sh
 cd spread_the_good_frontend
 ```
 
- <p> - Install NPM packages:</p>
+ <p> 2. Install NPM packages:</p>
  
 ```sh
 npm install
 ```
- <p> - Install React Router:</p>
+ <p> 3. Install React Router:</p>
 
 ```sh
 npm install react-router-dom
 ```
- <p> - Run the app:</p>
+ <p> 4. Run the app:</p>
 
 ```sh
 npm start
