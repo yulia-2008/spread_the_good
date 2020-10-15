@@ -24,8 +24,8 @@
 <h2> Backend Built With</h2>
 <ul>
  <li> <b>Ruby on Rails</b> to create RESTful design of the app.</li>
- <li> <b>Postgres</b> database for managing the data</li>
- <li> Integrated <b>Auth</b> for user authentication and authorization for app security</li>
+ <li> <b>Postgres</b> database for managing the data.</li>
+ <li> Integrated <b>Auth</b> for user authentication and authorization for app security.</li>
 </ul>
 
 
