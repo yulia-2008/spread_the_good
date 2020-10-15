@@ -57,7 +57,7 @@ Before start installation steps make sure you have following tools installed on 
 
 <p>In <b>spread_the_good_backend/config/database.yml</b> file enter your postgres user for the project and password as shown below:</p>
  <div align="center">
- <img src="./databse_yml_example.jpg"></img>
+ <img src="./database_yml_example.jpg"></img>
  </div>
 
   
