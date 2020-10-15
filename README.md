@@ -33,9 +33,9 @@
 <h2>Getting Started</h2>
 <p><b>Instructions on setting up the project locally.</b> </p>
 <p> 1. Make sure you have following tools installed on the system.</p>
-- Ruby 2.6.1
-- Rails 6.0.3.3
-- Postgresql
+<p>- Ruby 2.6.1 </p>
+<p>- Rails 6.0.3.3 </p>
+<p>- Postgresql </p>
 <p> 2. In your terminal go to the directory where you want to clone this project.</p>
 
 ```sh
@@ -89,4 +89,4 @@ npm install react-router-dom
 ```sh
 npm start
 ```
- (it starts on localhost:3000)
+<p>5. Now you can visit the app on the URL http://localhost:3000 </p>
