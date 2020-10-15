@@ -67,7 +67,7 @@ rails db:create
 ```sh
 rails db:migrate
 ``` 
- <p> 3. Start rails server on port 4000, make sure you are in the project backend directory.</p>
+ <p> 3. Start rails server on port 4000, (make sure you are in the project backend directory).</p>
      
 ```sh
 cd spread_the_good_backend
