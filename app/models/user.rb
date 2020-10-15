@@ -10,7 +10,8 @@ class User < ApplicationRecord
     has_many :help_seekers, through: :offered_help_posts, source: :help_seeker
     has_many :user_posts, class_name: "Post", foreign_key: :user_id, dependent: :destroy
     has_many :helpers, through: :user_posts, source: :helper
-
+    #@user_posts - posts that user created
+    #@user.posts - posts that user helped
 
     validates :username, presence: true, uniqueness: {message: ' : User with the same username already exists!'} 
     validates :password_digest, presence: true 
