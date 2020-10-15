@@ -6,7 +6,7 @@
 <h2>About The Project</h2>
 <p>Social network for helping others.</p> 
 <p>Users can list, search, message and increase karma score. </p>
-<p><b>Backend:</b> https://github.com/yulia-2008/nycable_backend</p>
+<p><b>Backend:</b> https://github.com/yulia-2008/spread_the_good_frontend</p>
 <p>The project backend seeded with a few fake user acounts and posts</p>
 
 <h2>Features</h2>
