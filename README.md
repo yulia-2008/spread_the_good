@@ -50,7 +50,7 @@ git clone  git@github.com:yulia-2008/spread_the_good_backend.git
 ```
 <p> <b>Backend installation: </b> </p>
 
-Before start installation steps make sure you have following tools installed on the system.
+Make sure you have following tools installed on the system.
 - Ruby 2.6.1
 - Rails 6.0.3.3
 - Postgresql
