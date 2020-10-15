@@ -10,9 +10,9 @@
 
 
 <h2>Features</h2>
-<p>- Creating an acoount. </p>
+<p>- Creating an account. </p>
 <p>- Searching posts by city.</p>
-<p>- Loging in/Logging out.</p>
+<p>- Logging in/Logging out.</p>
 <p>- Listing posts.</p>
 <p>- Editing/Deleting your posts.</p>
 <p>- Helping on others posts by clicking "Offer Your Help".</p>
@@ -73,7 +73,7 @@ rails db:create
 ```sh
 rails db:migrate
 ``` 
- <p> 4. Start rails server on port 4000,.</p>
+ <p> 4. Start rails server on port 4000.</p>
 
 
 ```sh
